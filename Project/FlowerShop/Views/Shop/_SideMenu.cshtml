@@ -1,0 +1,15 @@
+﻿@model PagedList<FlowerShop.ViewModels.ViewModelShop.ViewModelShop>
+@using PagedList;
+@using PagedList.Mvc;
+
+
+<div class="button-side-menu">
+    <div class="button-symbol glyphicon glyphicon-chevron-left">
+    </div>
+</div>
+<div class="small-side-menu">
+    @foreach (var value in ViewBag.Categories)
+    {
+        <a class="category-sorting" href="@Url.Action("AxajIndex", "Shop", new { searchCategory = @value.CategoryName})">@value.CategoryName</a>
+    }
+</div>

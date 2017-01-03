@@ -1,0 +1,43 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    
+    @Scripts.Render("~/bundles/main-scripts")
+    @Styles.Render("~/bundles/main-styles")
+    @RenderSection("javascriptsmain", required: false)
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @*@Html.Partial("_LoadSpiner")*@
+    <div class="Body">     
+            @*<div class="row register">
+                <div class="col-md-offset-1 col-md-9 col-sm-10">@Html.Partial("_LoginPartial")</div>
+            </div>*@
+            @*<div class="row menu">*@
+                @Html.Partial("Page/_PageNavigation")
+            @*</div>*@
+        <div class="container main-box">
+            @*<div class="row">*@
+                @*<div class="col-md-offset-1 col-md-11 col-sm-12">*@
+                    @RenderBody()    
+                @*</div>*@
+                @*<div class="sm-hidden">
+                    Hello world!
+                </div>*@
+            @*</div>*@
+        </div>
+            <footer>
+                <div class="row foot">
+                    <div class="col-md-12">
+                        @Html.Partial("Page/_PageFooter")
+                    </div>
+                </div>
+            </footer>
+        </div> 
+    @Html.Partial("_Modal")
+</body>
+</html>

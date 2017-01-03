@@ -1,0 +1,50 @@
+﻿@model FlowerShop.ViewModels.ViewModelProductPaging<FlowerShop.ViewModels.ViewModelProduct>
+@helper Truncate(string input, int lenght)
+{
+if (input.Length <= lenght)
+{
+        @input
+}
+else
+{
+        @input.Substring(0, lenght)<text>...</text>
+}
+}
+
+<tbody class="product-table-admin">
+    @foreach (var value in Model.Data)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => value.ViewId)</td>
+            <td>@Html.DisplayFor(modelItem => value.ViewFlowerName)</td>
+            <td>@Truncate(value.ViewFlowerDescription, 20)</td>
+            <td>@Html.DisplayFor(modelItem => value.ViewFlowerPrice)</td>
+            <td>@Html.DisplayFor(modelItem => value.ViewFlowerDiscount) %</td>
+            <td>@Html.DisplayFor(modelItem => value.ViewCategory)</td>
+            <td>
+                @foreach (var image in value.ViewImages)
+                {
+                    @Html.Raw(("<img style='width:80px; height:60px;' src=\"data:image/jpeg;base64,"
+                                + Convert.ToBase64String(image.ProductImage) + "\" />"))
+                }               
+            </td>
+            <td>@Html.DisplayFor(modelItem => value.ViewFlowerAddedDate)</td>
+            <td>
+                <a href="@Url.Action("Edit", new { id = value.ViewId})" class="btn-edit" data-toggle="modal" data-target="#myModal">Edit</a>
+                <a href="@Url.Action("DeleteProduct", new { id = value.ViewId})" class="btn-delete">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>
+@*<td colspan="3">*@
+<tfoot class="tfoot-remove">
+    <tr>
+        <td>
+            @for (int i = 1; i <= Model.NumberOfPages; i++)
+            {
+                <a class="paging-numper" href="@Url.Action("ProductAjaxList", "Product", new { page = i })" data-url="@Url.Action("AjaxProductCategoryList")" data-page="@i">@i</a>
+            }
+        </td>
+    </tr>
+</tfoot>
+@*</td>*@

@@ -1,0 +1,94 @@
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\FlowerShopLibrary.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\FlowerShopLibrary.pdb
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.pdb
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\FlowerShopLibrary.dll.config
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.Security.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Web.Infrastructure.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Owin.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Helpers.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Mvc.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Razor.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Deployment.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Razor.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.Security.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Helpers.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Mvc.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Razor.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Deployment.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Razor.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.csprojResolveAssemblyReference.cache
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._001.resources
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.csproj.GenerateResource.Cache
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Newtonsoft.Json.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.WebHost.dll
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\Newtonsoft.Json.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.WebHost.xml
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._002.resources
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._003.resources
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._004.resources
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._005.resources
+C:\Users\user-pc\Documents\Visual Studio 2015\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._006.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\FlowerShopLibrary.dll.config
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\FlowerShopLibrary.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\FlowerShopLibrary.pdb
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.SqlServer.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.Core.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.Security.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Web.Infrastructure.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Newtonsoft.Json.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Owin.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Net.Http.Formatting.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Helpers.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.WebHost.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Mvc.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Razor.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Deployment.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Razor.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\EntityFramework.SqlServer.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.Core.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Microsoft.Owin.Security.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\Newtonsoft.Json.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Net.Http.Formatting.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Helpers.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Http.WebHost.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Mvc.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.Razor.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Deployment.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\bin\Debug\System.Web.WebPages.Razor.xml
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.csprojResolveAssemblyReference.cache
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._001.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._002.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._003.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._004.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._005.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.Migrations._006.resources
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.csproj.GenerateResource.Cache
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.dll
+G:\ProjectsBackup311216\Projects\FlowerShopLibrary\obj\Debug\FlowerShopLibrary.pdb

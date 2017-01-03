@@ -1,0 +1,19 @@
+﻿@model FlowerShop.ViewModels.ViewModelCategory
+@{
+    ViewBag.Title = "AddCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>AddCategory</h2>
+
+@using (Html.BeginForm("Add", "Category", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div>
+        @Html.LabelFor(c => c.CategoryName)
+        @Html.TextBoxFor(c => c.CategoryName)
+    </div>
+    <div>
+        <input type="file" name="file" multiple/> 
+    </div>
+    <button type="submit" value="Save">AddCategory</button>
+}

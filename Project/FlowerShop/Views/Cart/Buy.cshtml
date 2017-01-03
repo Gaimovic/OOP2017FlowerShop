@@ -1,0 +1,28 @@
+﻿@*@model List<FlowerShop.ViewModels.ViewModelCart.ViewModelItem>
+@{
+    ViewBag.Title = "Buy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Buy</h2>
+
+<table>
+    <tr>
+        <th>@Html.LabelFor(i => i.FirstOrDefault().Products.FlowerName)</th>
+        <th>@Html.LabelFor(i => i.FirstOrDefault().Products.FlowerPrice)</th>
+        <th>@Html.LabelFor(i => i.FirstOrDefault().Quantity)</th>
+    </tr>
+    @foreach(var value in Model)
+    {
+        <tr>
+            <td>@value.Products.FlowerName</td>
+            <td>@value.Products.FlowerPrice</td>
+            <td>@value.Quantity</td>
+        </tr>
+    }
+    <tr>
+        <td>
+            <a href="#">CheckOut</a>
+        </td>
+    </tr>
+</table>*@

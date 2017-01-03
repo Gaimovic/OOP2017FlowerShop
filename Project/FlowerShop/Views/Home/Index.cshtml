@@ -1,0 +1,134 @@
+﻿@using System.Web.Optimization
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutHome.cshtml";
+}
+
+@section javascriptshome {
+    @Scripts.Render("~/bundles/skrollr-js")
+    @Styles.Render("~/bundles/home-main.css")
+}
+
+@*<div id="info">0</div>*@
+<div id="page-container">
+    <div id="slides-container">
+        <div id="slides"
+             data-0="transform: translate(0%, 0%)"
+             data-150p="transform: translate(0%, -50%)"
+             data-200p=""
+             data-300p="transform: translate(-50%, -50%)"
+             data-350p=""
+             data-450p="transform: translate(-50%, 0%)">
+
+            <div id="slide-1" class="slide">
+                <div class="slide-1-hover"></div>
+                <div class="caption-box"
+                     data-top="opacity: 0;"
+                     data-50p-top="opacity: 1;"
+                     data-100p-top="opacity: 0;"
+                     data-anchor-target="#slide-1 h2 ">
+                    <div class="caption-box-content">
+                        <h2>Welcome to Flower Shop</h2>
+                        <p>
+                            <a href="@Url.Action("Index", "Shop")">To Shop</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <div id="slide-2" class="slide">
+                <div class="slide-2-hover"></div>
+                <div class="add-block-2"
+                     data--50p-top="opacity:1;"
+                     data--100p-top="opacity:1; transform: scale(1, 1);"
+                     data--120p-top="transform: scale(1, 1.2);"
+                     data--170p-top="transform: scale(0, 0.8);">
+                    <div class="first-second-slide">
+                        <h2>So what is a flower? </h2>
+                    </div>
+                </div>
+                <div class="caption"
+                     data--100p-top="opacity:0;"
+                     data--110p-top="opacity:1; transform: translate(0%, 0%);"
+                     data--150p-top="opacity: 1;"
+                     data--170p-top="opacity:1; transform: translate(300%, 0%);"
+                     data--190p-top="opacity: 0;"
+                     data-anchor-target="#slide-1 h2">
+                    @*<h2>Title 2</h2>*@
+                    <h3>Their array of colors ...</h3>
+                </div>
+                <div class="caption-second-slide"
+                     data--100p-top="opacity:0;"
+                     data--110p-top="opacity:1; transform: translate(-50%, 0%);"
+                     data--150p-top="opacity:1; transform: translate(-50%, 50%);"
+                     data--170p-top="opacity:0;"
+                     data-anchor-target="#slide-1 h2">
+                    <div class="caption-second-slide-content">
+                        <h2>
+                            People love flowers for ...
+                        </h2>
+                    </div>
+                </div>
+                <div class="caption-second-hiden"
+                     data--30p-top="opacity:0;"
+                     data--50p-top="opacity:1; transform: translate(-50%, -50%) scale(1.2, 1.2);"
+                     data--90p-top="opacity:1; transform: translate(-50%, -20%) scale(2, 2);"
+                     data--100p-top="opacity:0;">
+                    <p>
+                        The flowers that bloom in the warmth of the sun
+                        Are there to be loved by anyone
+                    </p>
+                    <p>RICHARD D. JAMES</p>
+                </div>
+            </div>
+            <div id="slide-3" class="slide">
+                <div class="slide-3-hover"></div>
+                <div class="caption-third-slide"
+                     data--300p-top="opacity:0;"
+                     data--320p-top="opacity:1; transform:translateX(100%);"
+                     data--380p-top="opacity:1; transform:translateX(200%);"
+                     data--400p-top="opacity:0; transform:translateX(350%);"
+                     data-anchor-target="#slide-1 h2">
+
+                </div>
+                <div class="caption-third-slide-text"
+                     data--330p-top="opacity:0;"
+                     data--360p-top="opacity:1; "
+                     data--400p-top="opacity:1;">
+                    <h2>
+                        Every flower is a soul blossoming in nature...
+                    </h2>
+                </div>
+                <div class="caption-third-slide-name"
+                     data--330p-top="opacity:0;"
+                     data--360p-top="opacity:0; "
+                     data--400p-top="opacity:1;">
+                    <h1>Gerard De Nerval</h1>
+                </div>
+            </div>
+            <div id="slide-4" class="slide">
+                <div class="slide-4-hover"></div>
+                <div class="add-block-4"
+                     data--100p-top="opacity:0;"
+                     data--120p-top="opacity:1; transform: scale(1, 1);"
+                     data--200p-top="opacity:1; transform: scale(1, 0.8);"
+                     data--300p-top="opacity:1; transform: scale(1, 0.6);"
+                     data--340p-top=""
+                     data--400p-top="transform: scale(1, 0);"></div>
+                <div class="caption-four-slide">
+                    <div class="caption-four-slide-content">
+                        <h2>Textures, shapes and fragrances.</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @*<div id="helper">
+            <div class="marker picture1"></div>
+            <div class="marker picture2"></div>
+            <div class="marker picture3"></div>
+            <div class="marker picture4"></div>
+        </div>*@
+</div>

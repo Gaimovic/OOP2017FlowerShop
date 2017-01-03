@@ -1,0 +1,53 @@
+﻿.product-list-container table tbody tr:nth-child(odd){
+    background: #eee;
+}
+
+.product-list-container table tbody td a:link, .product-list-container table tbody td a:visited{
+    color: #1A1A22;
+}
+
+.product-list-container table tbody td:hover, .product-list-container table tbody td a:hover, .product-list-container table tbody td a:active {
+    background-color: #4C4C59;
+    color: #D9D9E0; 
+}
+
+.product-list-container table thead th{
+    background-color: #4C4C59;
+    color: #D9D9E0; 
+}
+
+.product-list-container table thead th:hover{
+    background-color: #575760;
+    color: #F4F4FE; 
+}
+
+
+
+
+/*List jquery*/
+
+.field-product-list .add-edit-field{
+    display: none;
+}
+
+
+.field-product-list .close-field{
+    display: none;
+}
+
+
+.field-product-list a{
+    text-decoration: none;
+    background-color:#333338;
+    color: #D9D9E0;
+}
+
+.side-navigation .row ul{
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .sm-hidden {
+        display: none;
+    }
+}

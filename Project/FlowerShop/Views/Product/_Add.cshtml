@@ -1,0 +1,93 @@
+﻿@model FlowerShop.ViewModels.ViewModelProduct
+@using System.Web.Optimization
+@*@Scripts.Render("~/bundles/dropzone-js")
+    @Styles.Render("~/bundles/dropzone-css")*@
+
+@using (Html.BeginForm("Add", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="modal-header">
+        <button type="button" class="close close-modal">&times;</button>
+        <h4 class="modal-title">Add</h4>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">
+                    @Html.LabelFor(p => p.ViewFlowerName)
+                </div>
+                <div class="col-md-4">
+                    @Html.TextBoxFor(p => p.ViewFlowerName)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">                  
+                    @Html.LabelFor(p => p.ViewFlowerDescription)
+                </div>
+                <div class="col-md-4">
+                    @Html.TextAreaFor(p => p.ViewFlowerDescription)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">
+                   @Html.LabelFor(p => p.ViewFlowerPrice)
+                </div>
+                <div class="col-md-4">
+                   @Html.TextBoxFor(p => p.ViewFlowerPrice)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">
+                    @Html.LabelFor(p => p.ViewFlowerDiscount) %
+                </div>
+                <div class="col-md-4">
+                    @Html.TextBoxFor(p => p.ViewFlowerDiscount)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">
+                    @Html.LabelFor(p => p.ViewCategories)
+                </div>
+                <div class="col-md-4">
+                    @Html.DropDownListFor(m => m.ViewCategoryId, Model.ViewCategories)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">
+                    @Html.LabelFor(p => p.Special)
+                </div>
+                <div class="col-md-4">
+                    @Html.EditorFor(p => p.Special)
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-md-offset-1 col-md-3">
+                    @Html.LabelFor(p => p.ViewImages)
+                </div>
+                <br />
+                <div class="col-md-12">
+                    <div id="MyId" class="dropzone" data-url="@Url.Action("Add", "Product")">
+
+                        <input type="file" name="file" multiple />
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <input id="btnUpload" type="submit" value="Submit" class="btn btn-default" multiple />
+        <button type="button" class="btn btn-default close-modal">Close</button>
+    </div>
+}

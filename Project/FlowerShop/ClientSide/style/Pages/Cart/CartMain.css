@@ -1,0 +1,91 @@
+﻿body {
+}
+
+.container a{
+    text-decoration: none;
+    color: black;
+
+}
+
+/*.container a:hover{
+
+    color: gray;
+}*/
+.cart-box{
+    display: block;
+}
+
+.container .checkout-button:hover{
+     -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+.container .checkout-button:hover{
+    -webkit-transform: scale(2.1);
+    -moz-transform: scale(2.1);
+    -o-transform: scale(2.1);
+    transform: scale(2.1);
+
+    color: white;
+
+    background-color: darkgray;
+}
+
+.car-box-checkout{
+    display: block;
+    text-align: right;
+    padding-right: 50px;
+}
+
+.car-box-checkout .checkout-button{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 3px;
+
+    border: 1px dashed black;
+
+      -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -o-transform: scale(2);
+    transform: scale(2);
+}
+
+
+.checkout-box-values{
+    margin: 10px 0px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.checkout-box-values h2, .checkout-box-values .checkbox{
+    text-align: center;
+}
+@media screen and (max-width: 800px) {
+  .checkout-box-values{
+      margin-top: 50px;
+      text-align: center;
+  }
+
+  .cart-box{
+      margin-top: 50px;
+  }
+
+  .car-box-checkout{
+      padding: 0px;
+  }
+  .car-box-sum, .car-box-checkout{
+      text-align:center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+    
+  .hide-table-field{
+      display: none;
+  }
+}
