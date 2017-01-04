@@ -170,11 +170,11 @@ namespace FlowerShop.Controllers
                 {
 
                     // создаем claim для хранения года рождения
-                   // var identityClaim = new IdentityUserClaim { ClaimType = "Roles", ClaimValue = model.Role.ToString() };
-                    var identityClaim = new UserClaim { ClaimType = "Roles", ClaimValue = model.Role.ToString() };
+                    // var identityClaim = new IdentityUserClaim { ClaimType = "Roles", ClaimValue = model.Role.ToString() };
+                    var identityClaim = new UserClaim { ClaimType = "Roles", ClaimValue = "User" };
                     // добавляем claim пользователю
                     user.Claims.Add(identityClaim);
-                    
+
                     // сохраняем изменения
                     await UserManager.UpdateAsync(user);
 

@@ -223,8 +223,7 @@
     <Content Include="ClientSide\scripts\Pages\Home\homeMain.js" />
     <Content Include="ClientSide\scripts\Pages\News\NewsList.js" />
     <Content Include="ClientSide\scripts\Pages\preloader.js" />
-    <Content Include="ClientSide\scripts\Pages\Product\dropzone_list.js" />
-    <Content Include="ClientSide\scripts\Pages\Product\List.js" />
+    <Content Include="ClientSide\scripts\Pages\Product\ListList%28backup%29.js" />
     <Content Include="ClientSide\scripts\Pages\Product\ProductCategoryList.js" />
     <Content Include="ClientSide\scripts\Pages\register_login.js" />
     <Content Include="ClientSide\scripts\Pages\Shop\ShopDetails.js" />

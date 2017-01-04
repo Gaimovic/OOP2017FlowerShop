@@ -5,7 +5,7 @@
 
 let ProductCategoryList = (function (main) {
 
-    
+
     function initAction() {
 
         //Ajax DELETE
@@ -54,8 +54,8 @@ let ProductCategoryList = (function (main) {
 
         //Ajax Add
 
-        $(document).on("click","#btnUpload", function (event) {
-            
+        $(document).on("click", "#btnUpload", function (event) {
+
             event.preventDefault();
 
             console.log("test");
@@ -64,7 +64,7 @@ let ProductCategoryList = (function (main) {
         $(document).on("click", ".btn-add", function (event) {
 
             event.preventDefault();
-            
+
 
             let $this = $(this);
 
@@ -90,7 +90,7 @@ let ProductCategoryList = (function (main) {
                         parallelUploads: 20,
                         init: function () {
                             let dropzone = this;
-                         
+
                             let submitButton = document.querySelector("#btnUpload")
 
                             $("#btnUpload").on("click", function (e) {
@@ -126,7 +126,7 @@ let ProductCategoryList = (function (main) {
             let searchCategory = $this.data("value");
             $(".btn-category-link").removeClass("sort-category");
             $this.addClass("sort-category");
-       
+
             console.log(searchCategory);
             $.ajax({
                 url: $this.data("url"),
@@ -211,7 +211,7 @@ let ProductCategoryList = (function (main) {
             let page = $(".paging-numper").html();
             let searchString = $(this).val().toString();
 
-         //   console.log(searchString);
+            //   console.log(searchString);
             $.ajax({
                 url: $search.data("url"),
                 method: "POST",
@@ -223,13 +223,13 @@ let ProductCategoryList = (function (main) {
             });
         });
 
-       // pageNumeration
+        // pageNumeration
         $(document).on('click', ".paging-numper", function (event) {
 
             event.preventDefault();
             $this = $(this);
             let searchCategory = $(document).find(".btn-category-link.sort-category").data("value");
-           // console.log(searchCategory);
+            // console.log(searchCategory);
             let page = $this.data("page");
             //console.log(page);
             //console.log(searchCategory);

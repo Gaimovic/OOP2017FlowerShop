@@ -80,9 +80,9 @@ namespace FlowerShopLibrary.Models
         [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
         public string ConfirmPassword { get; set; }
 
-        [Required]
-        [Display(Name = "Role")]
-        public string Role { get; set; }
+        //[Required]
+        //[Display(Name = "Role")]
+        //public string Role { get; set; }
     }
 
     public class ResetPasswordViewModel

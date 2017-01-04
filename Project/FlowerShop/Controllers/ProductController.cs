@@ -15,7 +15,7 @@ namespace FlowerShop.Controllers
     public class ProductController : Controller
     {
         private const int pageSize = 14;
-        
+
         private readonly IProductService _iproductservice;
 
         public ProductController(IProductService iproductservice)
@@ -117,7 +117,7 @@ namespace FlowerShop.Controllers
             //var test = Request.Form["ViewFlowerName"].ToString();
 
             var ProductImages = new List<ProductImages>();
-            
+
 
             foreach (var uploadedImage in file)
             {
@@ -129,7 +129,7 @@ namespace FlowerShop.Controllers
                     {
                         ProductImage = binaryReader.ReadBytes(uploadedImage.ContentLength)
                     });
-                };         
+                };
             }
 
             var product = new Product()
@@ -183,7 +183,7 @@ namespace FlowerShop.Controllers
             if (ModelState.IsValid)
             {
                 var ProductImages = new List<ProductImages>();
-              //  byte[] Image = null;
+                //  byte[] Image = null;
 
                 foreach (var uploadedImage in file)
                 {
@@ -222,7 +222,7 @@ namespace FlowerShop.Controllers
             return Json(new { success = success });
         }
 
-        // [ClaimsAuthorize(MyRole = "Admin")]
+        [ClaimsAuthorize(MyRole = "Admin")]
 
         public ActionResult List(string searchString)
         {
@@ -249,7 +249,7 @@ namespace FlowerShop.Controllers
                     ViewFlowerDescription = value.FlowerDescription,
                     ViewFlowerPrice = value.FlowerPrice,
                     ViewFlowerDiscount = Decimal.ToInt32(value.FlowerDiscount != null ? (decimal)value.FlowerDiscount : 0),
-                  //  ViewFlowerPriceWithDiscount = (value.FlowerPrice - (value.FlowerPrice/100 * (decimal)value.FlowerDiscount)).ToString(),
+                    //  ViewFlowerPriceWithDiscount = (value.FlowerPrice - (value.FlowerPrice/100 * (decimal)value.FlowerDiscount)).ToString(),
                     ViewCategory = value.Category.CategoryName,
                     ViewFlowerAddedDate = value.FlowerAdded.ToString(),
                     Special = value.Special,
@@ -266,6 +266,7 @@ namespace FlowerShop.Controllers
             return View(modelproductPaging);
         }
 
+        [ClaimsAuthorize(MyRole = "Admin")]
         public ActionResult ProductAjaxList(TableParam tableParam, string searchCategory, string searchString, string page)
         {
             var list = _iproductservice.GetProductsList();
