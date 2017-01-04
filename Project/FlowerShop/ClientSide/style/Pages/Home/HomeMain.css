@@ -37,6 +37,7 @@
 
 .home-navigation .navbar a:active,.home-navigation .navbar a:visited, .home-navigation .navbar a:link{
     color: white;
+    text-decoration: none;
 }
 
 .home-navigation .navbar a:hover,.home-navigation .navbar li a:hover{

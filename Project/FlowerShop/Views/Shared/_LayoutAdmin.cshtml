@@ -16,14 +16,9 @@
         <div class="row menu">
             @Html.Partial("Page/_PageNavigation")
         </div>
-        <div class="container container-body">
-            @*<div class="row">
-                <div class="register col-md-4 col-md-offset-8">@Html.Partial("_LoginPartial")</div>
-            </div>*@
-            
+        <div class="container container-body">          
             <div class="row">
-                @*@{Html.RenderAction("Menu", "Navigation");}*@
-
+               
                 <div class="col-md-9 body-content">
                     @RenderBody()
                 </div>
