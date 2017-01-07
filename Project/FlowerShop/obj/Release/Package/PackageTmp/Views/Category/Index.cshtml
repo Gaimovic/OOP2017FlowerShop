@@ -1,0 +1,73 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelCategory>
+@using System.Web.Optimization
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section javascriptsmain {
+    @Scripts.Render("~/bundles/category-index-js")
+    @Styles.Render("~/bundles/category-index-styles")
+}
+
+<div class="row">
+    <div class="col-md-offset-2 col-md-8">
+        
+        <div class="row">
+            <div class="category">
+                <hr />
+                @foreach (var value in Model)
+            {
+                    <div class="category-box col-md-3 col-sm-6 col-xs-12">
+
+                        <div class="box-circle">
+                            @foreach (var image in value.Images)
+                            {
+                                @Html.Raw(("<img src=\"data:image/jpeg;base64,"
+                         + Convert.ToBase64String(image.CategoryImage) + "\" />"))
+
+                            }
+                            <div class="box-circle-text">
+                                <a href="@Url.Action("Category", "Shop", new { categoryName = value.CategoryName})">
+                                    @value.CategoryName
+                                <br />
+                                @value.Quantity
+                            </a>
+
+                            @*<a href="#"></a>*@
+                        </div>
+                    </div>
+                </div>
+                }
+                <hr />
+            </div>   
+        </div>
+        
+    </div>
+</div>
+
+
+@*<div>
+        @{ int i = 0;}
+        @foreach (var image in value.Images)
+        {
+            @Html.Raw(("<img id='" + i + "' hidden style='width:80px; height:60px;' src=\"data:image/jpeg;base64,"
+                + Convert.ToBase64String(image.CategoryImage) + "\" />"))
+            i++;
+        }
+    </div>*@
+
+@*<div id="box-circle" class="category-box-circle">
+    <div class="circle-data">
+        @value.CategoryName
+    </div>
+    @*<div>
+        @{ int i = 0;}
+        @foreach (var image in value.Images)
+        {
+            @Html.Raw(("<img id='"+i+"' hidden style='width:80px; height:60px;' src=\"data:image/jpeg;base64,"
+            + Convert.ToBase64String(image.CategoryImage) + "\" />"))
+            i++;
+        }
+    </div>*@
+@*</div>*@       

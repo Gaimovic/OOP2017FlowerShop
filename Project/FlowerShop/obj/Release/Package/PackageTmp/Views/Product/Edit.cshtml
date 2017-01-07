@@ -1,0 +1,44 @@
+﻿@model FlowerShop.ViewModels.ViewModelProduct
+@{
+    ViewBag.Title = "EditProduct";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>EditProduct</h2>
+
+@using (Html.BeginForm("Edit", "Product", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table class="product-edit-table">
+        <thead>           
+            <tr>
+                <th>@Html.LabelFor(p => p.ViewFlowerName)</th>
+                <th>@Html.LabelFor(p => p.ViewFlowerDescription)</th>
+                <th>@Html.LabelFor(p => p.ViewFlowerPrice)</th>
+                <th>@Html.LabelFor(p => p.ViewFlowerDiscount)</th>
+                <th>@Html.LabelFor(p => p.Special)</th>
+                <th>@Html.LabelFor(p => p.ViewCategories)</th>
+                <th>@Html.LabelFor(p => p.ViewImages)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                @Html.HiddenFor(p => p.ViewId)
+                @Html.TextBoxFor(p => p.ViewFlowerName)
+                </td>
+                <td>@Html.TextAreaFor(p => p.ViewFlowerDescription)</td>
+                <td>@Html.TextBoxFor(p => p.ViewFlowerPrice)</td>
+                <td>@Html.TextBoxFor(p => p.ViewFlowerDiscount)</td>
+                <td>@Html.EditorFor(p => p.Special)</td>
+                <td>
+                    @Html.DropDownListFor(m => m.ViewCategoryId, Model.ViewCategories @*, new { onchange = @"this.form.submit();" }*@)
+                <td>
+                    <div class="editor-field">
+                        <input type="file" name="file" multiple/>
+                    </div>
+                </td>               
+            </tr>
+        </tbody>
+    </table>
+    <input type="submit" value="Submit" />
+}

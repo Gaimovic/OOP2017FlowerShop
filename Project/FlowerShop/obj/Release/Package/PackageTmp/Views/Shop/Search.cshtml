@@ -1,0 +1,115 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelShop.ViewModelShop>
+@using System.Web.Optimization
+
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section javascriptsmain {
+    @Scripts.Render("~/bundles/shop-index-js")
+    @Styles.Render("~/bundles/shop-main.css")
+    @Styles.Render("~/bundles/shop-index.css")
+}
+
+
+<div class="row">
+    <div class="col-md-9 shop-index-box">
+        <div class="row">
+            @if (Model != null)
+            {
+                foreach (var value in Model)
+                {
+                    <div class="col-md-4 col-sm-6">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="product-box">
+                                    <div class="product-box-content">
+                                        <div class="row">
+                                            <div class="product-box-header col-md-12">
+                                                <h1><a href="@Url.Action("Details", "Shop", new { id = value.Id })">@value.ProductName</a></h1>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="product-box-body col-md-12">
+                                                <div class="product-box-image">
+                                                    @if (value.Special == true)
+                                                    {
+                                                        <div class="special-box">
+                                                            <p>Special</p>
+                                                        </div>
+                                                    }
+                                                    @if (value.ProductPriceWithDiscount != 0)
+                                                    {
+                                                        <div class="discount-box">
+                                                            <p>@value.ProductDiscount %</p>
+                                                            @*<p>@value.ProductPriceWithDiscount/p>*@
+                                                            <p>@string.Format("{0:0.00}", @value.ProductPriceWithDiscount)</p>
+                                                        </div>
+                                                    }
+
+                                                    <a href="@Url.Action("Details", "Shop", new { id = value.Id })" title="@value.ProductName">
+                                                        @Html.Raw(("<img src=\"data:image/jpeg;base64,"
++ Convert.ToBase64String(value.ProductImages.First().ProductImage) + "\" />"))
+                                                    </a>
+
+                                                </div>
+                                                <div class="product-box-price">
+                                                    <h2>@value.ProductPrice</h2>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="product-box-details-cart col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <a class="product-box-details-action" href="@Url.Action("Details", "Shop", new { id = value.Id })">Details</a>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <a class="product-box-details-action" href="@Url.Action("Buy", "Cart", new { id = value.Id })">AddToCart</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            }
+            else
+            {
+                <p>There is no such product in the shop.</p>
+            }
+
+        </div>
+    </div>
+    @*<div class="col-md-2 product-category-box">
+            <div class="col-md-12">
+                <ul>
+                    @foreach (var value in ViewBag.Categories)
+                {
+                        <li>
+                            <a class="category-sorting" href="@Url.Action("AxajIndex", "Shop", new { searchCategory = @value.CategoryName})">@value.CategoryName</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+            <div class="col-md-12">
+                @foreach (var value in Model.OrderByDescending(p => p.Id).Take(3))
+                {
+                    <a href="@Url.Action("Details", "Shop", new { id = value.Id })" title="@value.ProductName">
+                        @Html.Raw(("<img height='200px' width='200px' class='MySlides' src=\"data:image/jpeg;base64,"
+                         + Convert.ToBase64String(value.ProductImages.First().ProductImage) + "\" />"))
+                    </a>
+
+                }
+            </div>
+
+        </div>*@
+</div>
+
+
+
+

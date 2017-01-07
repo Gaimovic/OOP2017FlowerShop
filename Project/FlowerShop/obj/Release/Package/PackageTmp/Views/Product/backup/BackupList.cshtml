@@ -1,0 +1,56 @@
+﻿@*@model List<FlowerShop.ViewModels.ViewModelProduct>*@
+@model FlowerShop.ViewModels.ViewModelProductPaging<FlowerShop.ViewModels.ViewModelProduct>
+@using System.Web.Optimization;
+@{
+    ViewBag.Title = "ProductList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section javascriptsmainadmin {
+    @Styles.Render("~/product-style")
+    @Scripts.Render("~/bundles/dropzone-js")
+    @Styles.Render("~/bundles/dropzone-css")
+    @Scripts.Render("~/bundles/product-js")
+}
+
+@*<div class="container">*@
+    <div class="product-list-container">
+        <input id="searchbox" type="text" />
+        <input class="btn-search" type="button" value="Search" data-url="@Url.Action("ProductAjaxList")" />
+        <div class="table-responsive">
+            <table class="table table-with-sorting" data-url="@Url.Action("ProductAjaxList")">
+                <thead>
+                    <tr>
+                        <th class="sortable" data-field-name="Id">@Html.LabelFor(p => p.Data.FirstOrDefault().ViewId)</th>
+                        <th>@Html.LabelFor(p => p.Data.FirstOrDefault().ViewFlowerName)</th>
+                        <th>@Html.LabelFor(p => p.Data.FirstOrDefault().ViewFlowerDescription)</th>
+                        <th class="sortable" data-field-name="Price">@Html.LabelFor(p => p.Data.FirstOrDefault().ViewFlowerPrice)</th>
+                        <th>@Html.LabelFor(p => p.Data.FirstOrDefault().ViewCategory)</th>
+                        <th>@Html.LabelFor(p => p.Data.FirstOrDefault().ViewImages)</th>
+                        <th>@Html.LabelFor(p => p.Data.FirstOrDefault().ViewFlowerAddedDate)</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                @{Html.RenderPartial("_ProductList"); }
+            </table>
+        </div>
+    </div>
+    <div class="field-product-list">
+
+        <a href="@Url.Action("Add", "Product")" class="btn-add btn btn-default"  data-toggle="modal" data-target="#myModal">Add Product</a>
+
+    </div>
+@*</div>*@
+
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="row">
+        <div class="modal-size">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

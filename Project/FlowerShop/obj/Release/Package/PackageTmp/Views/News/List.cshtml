@@ -1,0 +1,75 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelNews.ViewModelNews>
+@using System.Web.Optimization;
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section javascriptsmainadmin {
+    @Scripts.Render("~/bundles/news-js")
+    @Styles.Render("~/news-list-css")
+}
+
+<h2>News List</h2>
+@*<div class="container">*@
+<div class="news-list-container">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>@Html.LabelFor(n => n.FirstOrDefault().ViewId)</th>
+                    <th>@Html.LabelFor(n => n.FirstOrDefault().ViewTitle)</th>
+                    <th>@Html.LabelFor(n => n.FirstOrDefault().ViewDescription)</th>
+                    <th>@Html.LabelFor(n => n.FirstOrDefault().ViewImage)</th>
+                    <th>@Html.LabelFor(n => n.FirstOrDefault().CreatedById)</th>
+                    <th>@Html.LabelFor(n => n.FirstOrDefault().CreatedDateTime)</th>
+                    @*<th>@Html.LabelFor(n => n.FirstOrDefault().ModefiedById)</th>
+                        <th>@Html.LabelFor(n => n.FirstOrDefault().ModifiedDateTime)</th>*@
+                    <th>Action</th>
+                </tr>
+            </thead>
+            @{Html.RenderPartial("_List"); }
+        </table>
+    </div>
+</div>
+<div class="field-product-list">
+
+    <a href="@Url.Action("Add", "News")" class="btn-add btn btn-default" data-toggle="modal" data-target="#myModal">Add</a>
+
+</div>
+@*</div>*@
+
+
+@*<div class="modal fade" id="myModal" role="dialog">
+    <div class="row">
+        <div class="modal-size">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+
+@*@helper ModifiedId(int value) {
+    if (value != 0)
+    {
+            @value;
+    } else
+    {
+        @value.ToString() == "EMPTY";
+    }
+
+    }*@
+@*@helper DateTime(string value) {
+    if(value != null)
+    {
+        @value;
+    }else
+    {
+            @value == "EMPTY";
+    }
+
+    }*@

@@ -1,0 +1,56 @@
+﻿@model FlowerShop.ViewModels.ViewModelShop.ViewModelShopDetails
+@using System.Web.Optimization
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section javascriptsmain {
+    @Scripts.Render("~/bundles/shop-details-js")
+    @Scripts.Render("~/bundles/jquery-cicle-js")
+    @Styles.Render("~/bundles/shop-details.css")
+}
+
+@*<div class="row">
+   <div class="product-box">*@
+       <div class="row">
+           <div class="product-title col-md-12">           
+                   <h2>Product: @Model.DetailsName @string.Format("{0:0.00}", @Model.DetailsPrice) $</h2>       
+           </div>
+       </div>
+       <div class="row">
+           <div class="product-main-image col-md-12 col-xs-12">
+                   @foreach (var image in Model.DetailsImages)
+                   {
+                       @Html.Raw(("<img  src=\"data:image/jpeg;base64,"
+                                                 + Convert.ToBase64String(image.ProductImage) + "\" />"))
+                   }
+           </div>
+       </div>
+       <div class="row product-image-library">
+           @*<div class="product-image-library col-md-12 col-sm-4">*@
+               @foreach (var image in Model.DetailsImages)
+               {
+                   <div class="image-box images col-md-4 col-xs-12">
+                       @Html.Raw(("<img class='center-block' src=\"data:image/jpeg;base64,"
+                                                 + Convert.ToBase64String(image.ProductImage) + "\" />"))
+                   </div>
+                 
+               }
+           @*</div>*@
+       </div>
+       <div class="row">
+           <div class="product-description col-md-12">            
+                   <p>@Model.DetailsDescription</p>
+           </div>
+       </div>
+       <div class="row">
+           <div class="product-action col-md-12">
+               <a class="btn btn-default" href="@Url.Action("Buy", "Cart", new { id = Model.DetailId})">AddToCart</a>
+           </div>
+       </div>
+
+
+
+
+

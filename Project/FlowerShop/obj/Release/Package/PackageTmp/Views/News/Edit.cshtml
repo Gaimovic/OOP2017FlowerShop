@@ -1,0 +1,29 @@
+﻿@model FlowerShop.ViewModels.ViewModelNews.ViewModelNews
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "News", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr>
+            <th>@Html.LabelFor(n => n.ViewTitle)</th>
+            <th>@Html.LabelFor(n => n.ViewDescription)</th>
+            <th>@Html.LabelFor(n => n.ViewImage)</th>
+        </tr>
+        <tr>
+            <td>
+                @Html.HiddenFor(n => n.ViewId)
+            @Html.TextBoxFor(n => n.ViewTitle)
+            </td>
+            <td>@Html.TextBoxFor(n => n.ViewDescription)</td>
+            <td>
+                <input type="file" name="file" />
+            </td>
+        </tr>
+    </table>
+    <input type="submit" value="Submit" />
+}

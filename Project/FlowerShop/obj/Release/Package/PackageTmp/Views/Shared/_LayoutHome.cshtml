@@ -1,0 +1,27 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Scripts.Render("~/bundles/main-scripts")
+    @*@Styles.Render("~/bundles/main-styles")*@
+
+    @RenderSection("javascriptshome", required: false)
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @Html.Partial("_LoadSpiner")
+    <div class="body">
+        <div class="home-navigation">
+            @Html.Partial("Page/_PageNavigation")
+        </div>
+
+
+        <div>
+            @RenderBody()
+        </div>
+        @Html.Partial("_Modal")
+    </div>
+</body>
+</html>

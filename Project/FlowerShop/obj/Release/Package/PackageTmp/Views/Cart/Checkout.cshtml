@@ -1,0 +1,56 @@
+﻿@model FlowerShop.ViewModels.ViewModelCart.ViewModelOrder
+@using System.Web.Optimization
+@{
+    ViewBag.Title = "Checkout";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section javascriptsmain {
+    @Styles.Render("~/bundles/cart-main.css")
+}
+
+@using (Html.BeginForm("Checkout", "Cart", FormMethod.Post)){
+<div class="row">
+    <div class="checkout-box-values col-md-offset-2 col-md-8">
+        <h2>Checkout</h2>
+        <div class="row">
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderFirstName)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderFirstName)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderLastName)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderLastName)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderAdress)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderAdress)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderCity)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderCity)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderPostalCode)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderPostalCode)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderCountry)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderCountry)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderPhone)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderPhone)</div>
+            </div>
+            <div class="checkout-box col-md-12">
+                <div class="col-md-offset-3 col-md-3">@Html.LabelFor(c => c.ViewOrderEmail)</div>
+                <div class="col-md-6">@Html.TextBoxFor(c => c.ViewOrderEmail)</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="checkbox">
+                <input type="submit" value="Submit" class="btn btn btn-default" />
+            </div>
+        </div>
+    </div>
+</div>
+}

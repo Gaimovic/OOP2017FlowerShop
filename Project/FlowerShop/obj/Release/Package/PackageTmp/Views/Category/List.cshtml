@@ -1,0 +1,65 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelCategory>
+@using System.Web.Optimization;
+@{
+    ViewBag.Title = "CategoryList";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@section javascriptsmainadmin {
+    @Scripts.Render("~/bundles/category-js")
+    @Styles.Render("~/bundles/category-styles")
+}
+
+<h2>Category List</h2>
+
+@*<div class="col-md-9">*@
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <tr>
+                <th>
+                    @(Html.LabelFor(c => c.FirstOrDefault().CategoryId))
+                </th>
+                <th>@(Html.LabelFor(c => c.FirstOrDefault().CategoryName))</th>
+                <th>Action</th>
+                <th>@(Html.LabelFor(c => c.FirstOrDefault().Images))</th>
+            </tr>
+            @foreach (var value in Model)
+            {
+                <tr>
+                    <td>@value.CategoryId</td>
+                    <td>@value.CategoryName</td>
+                    <td>
+                        <a href="@Url.Action("Edit", new { id = value.CategoryId})" class="btn-edit" data-toggle="modal" data-target="#myModal">Edit</a>
+                        <a href="@Url.Action("Delete", new { id = value.CategoryId})" class="btn-delete">Delete</a>
+                    </td>
+                    <td>
+                        @foreach (var image in value.Images)
+                        {
+                            @Html.Raw(("<img style='width:80px; height:60px;' src=\"data:image/jpeg;base64,"
+                                + Convert.ToBase64String(image.CategoryImage) + "\" />"))
+                        }
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+@*</div>*@
+<div class="field-category-list col-md-12">
+
+    <a href="@Url.Action("Add", "Category")" class="btn-add btn btn-default" data-toggle="modal" data-target="#myModal">Add</a>
+
+</div>
+
+@*<div class="modal fade" id="myModal" role="dialog">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+            <div class="modal-dialog">
+                <div class="modal-content">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>*@
+
+

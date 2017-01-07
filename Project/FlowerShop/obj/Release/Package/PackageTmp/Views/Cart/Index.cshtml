@@ -1,0 +1,82 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelCart.ViewModelItem>
+@using FlowerShop.ViewModels.ViewModelCart
+@using System.Web.Optimization
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section javascriptsmain {
+    @Styles.Render("~/bundles/cart-main.css")   
+}
+
+
+@{
+    var cart = (List<ViewModelItem>)Session["cart"];
+    int cartId = 0;
+    string sum = "";
+}
+<div class="row">
+    <div class="cart-box col-md-12">
+        <div class="col-md-offset-2 col-md-8 cart-box-table">
+            <h2>Cart</h2>
+            <table class="table table-hover table-responsive">
+                <tr>
+                    <th>@Html.LabelFor(i => i.FirstOrDefault().Products.FlowerName)</th>
+                    <th class="hide-table-field">@Html.LabelFor(i => i.FirstOrDefault().Products.FlowerPrice)</th>
+                    <th>@Html.LabelFor(i => i.FirstOrDefault().Quantity)</th>
+                    <th>Q x Price</th>
+                    <th class="hide-table-field">Details</th>
+                    <th>Remove</th>
+                </tr>
+                @if (cart != null)
+            {
+                foreach (var value in cart)
+                {
+                        <tr>
+                            <td>@value.Products.FlowerName</td>
+                            @if (value.DiscountedPrice != 0)
+                    {
+                                <td class="hide-table-field">@value.DiscountedPrice</td>
+                                <td>@value.Quantity</td>
+                                <td>@(value.DiscountedPrice * value.Quantity)$</td>
+                            }
+                            else
+                            {
+                                <td class="hide-table-field">@value.Products.FlowerPrice</td>
+                                <td>@value.Quantity</td>
+                                <td>@(string.Format("{0:0.00}", (value.Products.FlowerPrice * value.Quantity)))$</td>
+                            }
+                            <td class="hide-table-field"><a href="@Url.Action("Details", "Shop", new { id = value.Products.Id })">Details</a></td>
+                            <td><a href="@Url.Action("Delete", "Cart", new { id = cartId })">Remove</a></td>
+                        </tr>
+                        cartId++;
+
+                    }
+                    {
+                        var cartSum = (List<ViewModelItem>)Session["cart"];
+
+                        sum = string.Format("{0:0.00}", cartSum.Sum(i => i.DiscountedPrice != 0 ? i.Quantity * i.DiscountedPrice : i.Quantity * i.Products.FlowerPrice));
+                    }
+
+                }
+            </table>
+        </div>
+        <div class="col-md-offset-2 col-md-8 cart-box-action">
+            <div class="car-box-sum col-md-12">
+                <h2>Total Price: @sum $</h2>
+            </div>
+
+            <div class="car-box-checkout col-md-12">
+                <div class="checkout-button">
+                    <a href="@Url.Action("Checkout", "Cart")">
+                        Checkout
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

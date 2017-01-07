@@ -1,0 +1,55 @@
+﻿@using System.Web.Optimization
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    @Scripts.Render("~/bundles/main-scripts")
+    @Styles.Render("~/bundles/main-styles")
+    @RenderSection("javascriptsmainadmin", required: false)
+
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    @Html.Partial("_LoadSpiner")
+    <div class="Body">
+        <div class="row menu">
+            @Html.Partial("Page/_PageNavigation")
+        </div>
+        <div class="container container-body">          
+            <div class="row">
+               
+                <div class="col-md-9 body-content">
+                    @RenderBody()
+                </div>
+                <div class="col-md-2 side-navigation">
+                    <h2>Manage</h2>
+                    <div class="row">
+                        <a href="@Url.Action("List", "Product")">Product</a>
+                        @{Html.RenderAction("Menu", "Navigation");}
+                    </div>
+                    <div class="row">
+                        <a href="@Url.Action("List", "Category")">Category</a>
+                    </div>
+                    <div class="row">
+                        <a href="@Url.Action("List", "News")">News</a>
+                    </div>
+                    
+                </div>
+                @*<div class="sm-hidden">
+                    Hello world!
+                </div>*@
+            </div>
+            
+        </div>
+        <footer>
+            <div class="row foot">
+                <div class="col-md-12">
+                    @Html.Partial("Page/_PageFooter")
+                </div>
+            </div>
+        </footer>
+    </div>
+    @Html.Partial("_Modal")
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelShop.ViewModelShop>
+<h2>Last Products</h2>
+<div class="side-slides-box">
+    @foreach (var value in Model.OrderByDescending(p => p.Id).Take(3))
+    {
+        <a class="MySlides" href="@Url.Action("Details", "Shop", new { id = value.Id })" title="@value.ProductName">
+            @Html.Raw(("<img height='200px' width='200px'  src=\"data:image/jpeg;base64,"
+                     + Convert.ToBase64String(value.ProductImages.First().ProductImage) + "\" />"))
+
+            <p>@value.ProductName</p>
+        </a>
+    }
+</div>

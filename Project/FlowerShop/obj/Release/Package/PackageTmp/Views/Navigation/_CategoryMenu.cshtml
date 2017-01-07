@@ -1,0 +1,12 @@
+﻿@model IQueryable<string>
+<ul>
+    @foreach (var value in Model)
+    {
+        <li>
+            <a class="btn-category-link" href="@Url.Action("List", "Product", new { searchString = value })" data-value="@value" 
+               data-url="@Url.Action("ProductAjaxList", "Product")"> 
+                @value
+            </a>
+        </li>
+    }
+</ul>

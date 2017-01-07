@@ -1,0 +1,38 @@
+﻿@model List<FlowerShop.ViewModels.ViewModelNews.ViewModelNews>
+
+@helper Truncate(string input, int lenght)
+{
+if (input.Length <= lenght)
+{
+        @input
+}
+else
+{
+        @input.Substring(0, lenght)<text>...</text>
+}
+}
+<tbody>
+    @foreach (var value in Model)
+    {
+        <tr>
+            <td>@Html.DisplayFor(modelItem => value.ViewId)</td>
+            <td>@Html.DisplayFor(modelItem => value.ViewTitle)</td>
+            <td>@Truncate(value.ViewDescription, 20)</td>
+            <td>
+                @Html.Raw(("<img style='width:80px; height:60px;' src=\"data:image/jpeg;base64,"
+                                + Convert.ToBase64String(value.ViewImage) + "\" />"))
+            </td>
+            <td>@Html.DisplayFor(modelItem => value.CreatedById)</td>
+            <td>@Html.DisplayFor(modelItem => value.CreatedDateTime)</td>
+            @*<td>@ModifiedId(value.ModefiedById)</td>
+                <td>@DateTime(value.ModifiedDateTime)</td>*@
+            @*<td>@Html.DisplayFor(modelItem => value.ModefiedById)</td>
+                <td>@Html.DisplayFor(modelItem => value.ModifiedDateTime)</td>*@
+            <td>
+                <a href="@Url.Action("Edit", new { id = value.ViewId})" class="btn-edit" data-toggle="modal" data-target="#myModal">Edit</a>
+                <a href="@Url.Action("DeleteNews", new { id = value.ViewId})" class="btn-delete">Delete</a>
+            </td>
+        </tr>
+    }
+</tbody>
+
