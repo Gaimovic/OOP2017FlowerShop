@@ -334,19 +334,28 @@ div .special-box:hover {
         padding-top: 50px;
     }
 
+    /*.main-container{
+        left: 50%;
+
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }*/
+
     #slider-box {
         height: 300px;
-        width: 500px;
+        width: 420px;
     }
 
     .slider {
         height: 300px;
-        width: 500px;
+        width: 420px;
     }
 
         .slider .item img {
             height: 300px;
-            width: 500px;
+            width: 420px;
         }
 
     .product-box {
@@ -386,18 +395,18 @@ div .special-box:hover {
     }
 
     #slider-box {
-        height: 250px;
-        width: 330px;
+         height: 250px;
+         width: 290px;
     }
 
     .slider {
         height: 250px;
-        width: 330px;
+        width: 290px;
     }
 
         .slider .item img {
             height: 250px;
-            width: 330px;
+            width: 290px;
         }
     
 }

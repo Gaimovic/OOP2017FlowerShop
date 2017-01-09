@@ -80,8 +80,8 @@ footer .foot{
 }
 
 .main-container {
-    width: 970px;
-    margin: 0 auto;
+    /*width: 970px;*/
+
 }
 
 .container-body{
@@ -226,3 +226,15 @@ footer .foot{
     color: black;
     border-color: black;
 }
+
+
+   
+
+    @media screen and (max-width: 1080px) {
+        .main-container{
+            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+   
+    }
